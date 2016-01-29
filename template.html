@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Handlebars templates</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+
+		.body {
+			background: #eee;
+			padding: 1em;
+		}
+	</style>
+</head>
+<body>
+	<script id="template" type="text/x-handlebars-template">
+	<div>
+	<ul>
+		{{#each list}}
+		<li>{{.}}</li>
+		{{/each}}
+	</ul>
+
+	</div>
+
+	</script>
+
+	<script>
+
+	
+		var source = document.getElementById('template').innerHTML;
+
+		var render = Handlebars.compile(source);
+		var data = {
+			list: [ 'ett', 'två', 'tre','fyra','fem']
+		};
+
+
+
+		var html = render(data);
+		document.body.innerHTML = html;
+	</script>
+</body>
+</html>

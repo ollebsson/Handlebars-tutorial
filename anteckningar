@@ -1,0 +1,13 @@
+Hej {{namn}}!
+
+Thx för att du registrerade dig på {{forum}}
+
+Mvh {{webadmin}}
+
+var data = {
+	namn: 'Albin',
+	forum:'Albin forum',
+
+}
+
+Ctrl - F2 sätta ut punkt
